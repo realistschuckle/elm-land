@@ -11,3 +11,4 @@ load helpers
   expectOutputContains "couldn't find"
   expectOutputContains "Commonly used commands"
 }
+

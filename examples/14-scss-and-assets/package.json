@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "7.6.0",
-    "sass": "1.57.1"
+    "concurrently": "9.2.1",
+    "sass": "1.98.0"
   }
 }

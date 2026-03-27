@@ -41,7 +41,7 @@ load helpers
 
   cp -r ../../examples/01-hello-world ../../examples/01-local-hello
   cd ../../examples/01-local-hello
-  echo '{ "dependencies": { "elm-land": "file:../../projects/cli/elm-land-0.20.1.tgz" } }' > package.json
+  echo '{ "dependencies": { "elm-land": "file:../../projects/cli/elm-land-0.20.1.tgz" } }' >package.json
   npm install
 
   run npx elm-land build
@@ -53,13 +53,15 @@ load helpers
   cd ../projects/cli
 }
 
-@test "'elm-land build' should pass if elm-land is locally installed with yarn" {
+@test "'elm-land build' should pass if elm-land is locally installed with yarn (not corepack)" {
+  yarn_installed=$(npm ls --global | grep ' yarn@' | cat)
+
   npm rm -g elm-land
   npm pack
 
   cp -r ../../examples/01-hello-world ../../examples/01-local-hello
   cd ../../examples/01-local-hello
-  echo '{ "dependencies": { "elm-land": "file:../../projects/cli/elm-land-0.20.1.tgz" } }' > package.json
+  echo '{ "dependencies": { "elm-land": "file:../../projects/cli/elm-land-0.20.1.tgz" } }' >package.json
   npm install -g yarn
   yarn
 
@@ -70,15 +72,18 @@ load helpers
   cd ..
   rm -r 01-local-hello
   cd ../projects/cli
+  ([[ "$yarn_installed" = "" ]] && npm uninstall -g yarn) || echo ""
 }
 
-@test "'elm-land build' should pass if elm-land is locally installed with pnpm" {
+@test "'elm-land build' should pass if elm-land is locally installed with pnpm (not corepack)" {
+  pnpm_installed=$(npm ls --global | grep ' pnpm@' | cat)
+
   npm rm -g elm-land
   npm pack
 
   cp -r ../../examples/01-hello-world ../../examples/01-local-hello
   cd ../../examples/01-local-hello
-  echo '{ "dependencies": { "elm-land": "file:../../projects/cli/elm-land-0.20.1.tgz" } }' > package.json
+  echo '{ "dependencies": { "elm-land": "file:../../projects/cli/elm-land-0.20.1.tgz" } }' >package.json
   npm install -g pnpm
   pnpm install
 
@@ -89,6 +94,7 @@ load helpers
   cd ..
   rm -r 01-local-hello
   cd ../projects/cli
+  ([[ "$pnpm_installed" = "" ]] && npm uninstall -g pnpm) || echo ""
 }
 
 @test "reinstall elm-land" {
