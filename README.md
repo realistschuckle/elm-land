@@ -28,9 +28,37 @@ npm install --save-dev "https://github.com/realistschuckle/elm-land.git#updated-
 
 ### Updated contained in this fork
 
-| Package | Updated to |
-| ------- | ---------- |
-|         |            |
+| Project                            | Package                 | Updated from       | Updated to          |
+| ---------------------------------- | ----------------------- | ------------------ | ------------------- |
+| `docs`                             | `vitepress`             | `1.0.0-rc.35`      | `1.6.4`             |
+| `examples/05-user-auth/api-server` | `cors`                  | `2.8.5`            | `2.8.6`             |
+| `examples/05-user-auth/api-server` | `express`               | `4.18.1`           | `5.2.1`             |
+| `examples/05-user-auth/api-server` | `nodemon`               | `2.0.19`           | `3.1.4`             |
+| `examples/07-working-withjs`       | `three`                 | `0.147.0`          | `0.183.0`           |
+| `examples/11-error-reporting`      | `@sentry/browser`       | `7.19.0`           | `10.46.0`           |
+| `examples/11-error-reporting`      | `@sentry/tracing`       | `7.19.0`           | `7.120.4`           |
+| `examples/14-scss-and-assets`      | `concurrently`          | `7.6.0`            | `9.2.1`             |
+| `examples/14-scss-and-assets`      | `sass`                  | `1.57.1`           | `1.98.0`            |
+| `examples/19-tailwindcss`          | `autoprefiexer`         | `10.4.16`          | **removed**         |
+| `examples/19-tailwindcss`          | `tailwindcss`           | `3.4.0`            | `4.2.2`             |
+| `projects/cli`                     | `bats`                  | `1.7.0`            | `1.13.0`            |
+| `projects/cli`                     | `@lydell/elm`           | `0.9.1-14`         | **removed**         |
+| `projects/cli`                     | `elm`                   | **added**          | `0.19.1-6`          |
+| `projects/cli`                     | `chokidar`              | `3.5.3`            | `5.0.0`             |
+| `projects/cli`                     | `terser`                | `5.15.1`           | `5.46.1`            |
+| `projects/cli`                     | `typescript`            | `4.9.3`            | `5.9.3`             |
+| `projects/cli`                     | `vite`                  | `5.2.8`            | `8.0.3`             |
+| `projects/cli`                     | `vite-plugin-elm-watch` | `1.3.3`            | `1.4.4`             |
+| `projects/graphql`                 | `graphql`               | `16.6.0`           | `16.13.2`           |
+| `projects/graphql`                 | `bats`                  | **added**          | `1.13.0`            |
+| `projects/tooling/codegen`         | `elm`                   | `0.19.1-5`         | `0.19.1-6`          |
+| `projects/tooling/codegen`         | `elm-doc-preview`       | `5.0.5`            | `6.0.1`             |
+| `projects/tooling/codegen`         | `elm-test`              | `0.19.1-revision7` | `0.19.1-revision17` |
+| `projects/tooling/elm-error-json`  | `@types/jest`           | `27.5.1`           | `30.0.0`            |
+| `projects/tooling/elm-error-json`  | `@types/node`           | `17.0.35`          | `25.5.0`            |
+| `projects/tooling/elm-error-json`  | `jest`                  | `28.1.0`           | `30.3.0`            |
+| `projects/tooling/elm-error-json`  | `ts-jest`               | `28.0.3`           | `29.4.6`            |
+| `projects/tooling/elm-error-json`  | `typescript`            | `4.9.3`            | `5.9.3`             |
 
 ### Why this fork exists
 
