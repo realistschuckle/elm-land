@@ -54,8 +54,6 @@ load helpers
 }
 
 @test "'elm-land build' should pass if elm-land is locally installed with yarn (not corepack)" {
-  yarn_installed=$(npm ls --global | grep ' yarn@' | cat)
-
   npm rm -g elm-land
   npm pack
 
@@ -72,12 +70,9 @@ load helpers
   cd ..
   rm -r 01-local-hello
   cd ../projects/cli
-  ([[ "$yarn_installed" = "" ]] && npm uninstall -g yarn) || echo ""
 }
 
 @test "'elm-land build' should pass if elm-land is locally installed with pnpm (not corepack)" {
-  pnpm_installed=$(npm ls --global | grep ' pnpm@' | cat)
-
   npm rm -g elm-land
   npm pack
 
@@ -85,7 +80,7 @@ load helpers
   cd ../../examples/01-local-hello
   echo '{ "dependencies": { "elm-land": "file:../../projects/cli/elm-land-0.20.1.tgz" } }' >package.json
   npm install -g pnpm
-  pnpm install
+  pnpm install || pnpm approve-builds --all
 
   run npx elm-land build
   expectToPass
@@ -94,9 +89,15 @@ load helpers
   cd ..
   rm -r 01-local-hello
   cd ../projects/cli
-  ([[ "$pnpm_installed" = "" ]] && npm uninstall -g pnpm) || echo ""
 }
 
 @test "reinstall elm-land" {
   npm link
+}
+
+teardown_file() {
+  npm uninstall --global pnpm
+  npm uninstall --global yarn
+  npm uninstall --global elm-land
+  npm uninstall --global elm
 }

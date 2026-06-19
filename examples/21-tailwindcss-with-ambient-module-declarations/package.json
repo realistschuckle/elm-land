@@ -1,5 +1,5 @@
 {
-  "name": "elm-land-tailwindcss",
+  "name": "elm-land-tailwindcss-with-ambient-module-declarations",
   "version": "1.0.0",
   "description": "> Built with [Elm Land](https://elm.land) 🌈",
   "main": "index.js",

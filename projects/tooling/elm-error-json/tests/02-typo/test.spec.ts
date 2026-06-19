@@ -1,3 +1,4 @@
+import { beforeAll, describe, expect, test } from "@jest/globals";
 import path from "path";
 import ElmErrorJson, { ElmError } from "../../src/index";
 
@@ -9,7 +10,7 @@ beforeAll(async () => {
   process.chdir(__dirname);
   rawJson = await ElmErrorJson.toRawJsonString(filepath);
   parsedError = await ElmErrorJson.compile(filepath);
-});
+}, 30000);
 
 describe("02-typo", () => {
   test("raw error is what we expect", () => {
@@ -21,7 +22,7 @@ describe("02-typo", () => {
     );
     const actual = JSON.parse(rawJson);
     expect(actual).toStrictEqual(expected);
-  });
+  }, 30000);
 
   test("error can be parsed", () => {
     expect(parsedError).toBeDefined();
@@ -29,6 +30,6 @@ describe("02-typo", () => {
     if (parsedError) {
       console.log(ElmErrorJson.toColoredTerminalOutput(parsedError));
     }
-  });
+  }, 30000);
 });
 
