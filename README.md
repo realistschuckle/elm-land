@@ -46,39 +46,44 @@ branch now works like this.
 
 ### Updates contained in this fork
 
-| Project                            | Package                 | Updated from       | Updated to          |
-|------------------------------------|-------------------------|--------------------|---------------------|
-| `docs`                             | `vitepress`             | `1.0.0-rc.35`      | `1.6.4`             |
-| `examples/05-user-auth/api-server` | `cors`                  | `2.8.5`            | `2.8.6`             |
-| `examples/05-user-auth/api-server` | `express`               | `4.18.1`           | `5.2.1`             |
-| `examples/05-user-auth/api-server` | `nodemon`               | `2.0.19`           | `3.1.14`            |
-| `examples/07-working-withjs`       | `three`                 | `0.147.0`          | `0.184.0`           |
-| `examples/11-error-reporting`      | `@sentry/browser`       | `7.19.0`           | `10.58.0`           |
-| `examples/11-error-reporting`      | `@sentry/tracing`       | `7.19.0`           | `7.120.4`           |
-| `examples/14-scss-and-assets`      | `concurrently`          | `7.6.0`            | `10.0.3`            |
-| `examples/14-scss-and-assets`      | `sass`                  | `1.57.1`           | `1.101.0`           |
-| `examples/19-tailwindcss`          | `autoprefiexer`         | `10.4.16`          | **removed**         |
-| `examples/19-tailwindcss`          | `postcss`               | `8.4.32`           | `8.5.15`            |
-| `examples/19-tailwindcss`          | `tailwindcss`           | `3.4.0`            | `4.3.1`             |
-| `projects/cli`                     | `bats`                  | `1.7.0`            | `1.13.0`            |
-| `projects/cli`                     | `@lydell/elm`           | `0.9.1-14`         | **removed**         |
-| `projects/cli`                     | `elm`                   | **added**          | `0.19.1-6`          |
-| `projects/cli`                     | `chokidar`              | `3.5.3`            | `5.0.0`             |
-| `projects/cli`                     | `terser`                | `5.15.1`           | `5.48.0`            |
-| `projects/cli`                     | `typescript`            | `4.9.3`            | `6.0.3`             |
-| `projects/cli`                     | `vite`                  | `5.2.8`            | `8.0.16`            |
-| `projects/cli`                     | `vite-plugin-elm-watch` | `1.3.3`            | `1.4.4`             |
-| `projects/graphql`                 | `graphql`               | `16.6.0`           | `17.0.1`            |
-| `projects/graphql`                 | `bats`                  | **added**          | `1.13.0`            |
-| `projects/tooling/codegen`         | `elm`                   | `0.19.1-5`         | `0.19.1-6`          |
-| `projects/tooling/codegen`         | `elm-doc-preview`       | `5.0.5`            | `6.0.1`             |
-| `projects/tooling/codegen`         | `elm-test`              | `0.19.1-revision7` | `0.19.1-revision17` |
-| `projects/tooling/elm-error-json`  | `@types/jest`           | `27.5.1`           | `30.0.0`            |
-| `projects/tooling/elm-error-json`  | `@types/node`           | `17.0.35`          | `25.9.4`            |
-| `projects/tooling/elm-error-json`  | `elm`                   | **added**          | `0.19.1-6`          |
-| `projects/tooling/elm-error-json`  | `jest`                  | `28.1.0`           | `30.4.2`            |
-| `projects/tooling/elm-error-json`  | `ts-jest`               | `28.0.3`           | `29.4.11`           |
-| `projects/tooling/elm-error-json`  | `typescript`            | `4.9.3`            | `6.0.3`             |
+In all Elm projects, update `elm-version` to `0.19.2`.
+
+| Project                            | Package                 | Updated from  | Updated to  |
+|------------------------------------|-------------------------|---------------|-------------|
+| `docs`                             | `vitepress`             | `1.0.0-rc.35` | `1.6.4`     |
+| `examples/05-user-auth/api-server` | `cors`                  | `2.8.5`       | `2.8.6`     |
+| `examples/05-user-auth/api-server` | `express`               | `4.18.1`      | `5.2.1`     |
+| `examples/05-user-auth/api-server` | `nodemon`               | `2.0.19`      | `3.1.14`    |
+| `examples/07-working-withjs`       | `three`                 | `0.147.0`     | `0.186.1`   |
+| `examples/11-error-reporting`      | `@sentry/browser`       | `7.19.0`      | `11.1.0`    |
+| `examples/11-error-reporting`      | `@sentry/tracing`       | `7.19.0`      | `7.120.4`   |
+| `examples/14-scss-and-assets`      | `concurrently`          | `7.6.0`       | `10.0.5`    |
+| `examples/14-scss-and-assets`      | `sass`                  | `1.57.1`      | `1.105.0`   |
+| `examples/19-tailwindcss`          | `autoprefiexer`         | `10.4.16`     | **removed** |
+| `examples/19-tailwindcss`          | `postcss`               | `8.4.32`      | `8.5.28`    |
+| `examples/19-tailwindcss`          | `tailwindcss`           | `3.4.0`       | `4.3.3`     |
+| `projects/cli`                     | `bats`                  | `1.7.0`       | `1.13.0`    |
+| `projects/cli`                     | `@lydell/elm`           | `0.9.1-14`    | **removed** |
+| `projects/cli`                     | `elm`                   | **added**     | `0.19.2-0`  |
+| `projects/cli`                     | `chokidar`              | `3.5.3`       | `5.0.0`     |
+| `projects/cli`                     | `terser`                | `5.15.1`      | `5.41.2`    |
+| `projects/cli`                     | `typescript`            | `4.9.3`       | `7.0.2`     |
+| `projects/cli`                     | `vite`                  | `5.2.8`       | `8.3.1`     |
+| `projects/cli`                     | `vite-plugin-elm-watch` | `1.3.3`       | `2.0.0`     |
+| `projects/graphql`                 | `graphql`               | `16.6.0`      | `17.0.2`    |
+| `projects/graphql`                 | `bats`                  | **added**     | `1.13.0`    |
+| `projects/tooling/codegen`         | `elm`                   | `0.19.1-5`    | `0.19.2-0`  |
+| `projects/tooling/codegen`         | `elm-doc-preview`       | `5.0.5`       | `6.0.1`     |
+| `projects/tooling/codegen`         | `elm-test`              | `0.19.2`      | `0.19.2-1`  |
+| `projects/tooling/elm-error-json`  | `@types/jest`           | `27.5.1`      | `30.0.0`    |
+| `projects/tooling/elm-error-json`  | `@types/node`           | `17.0.35`     | `25.9.8`    |
+| `projects/tooling/elm-error-json`  | `elm`                   | **added**     | `0.19.2-0`  |
+| `projects/tooling/elm-error-json`  | `jest`                  | `28.1.0`      | `30.5.2`    |
+| `projects/tooling/elm-error-json`  | `ts-jest`               | `28.0.3`      | `29.4.14`   |
+| `projects/tooling/elm-error-json`  | `typescript`            | `4.9.3`       | `6.0.3`     |
+
+NOTE: TypeScript in the `elm-error-json` has not been updated to 7.0.2 due to
+`ts-jest` not supporting that version at this time.
 
 ### Why this fork exists
 
