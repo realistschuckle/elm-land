@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/elm-land/elm-land#readme",
   "dependencies": {
-    "graphql": "16.13.2"
+    "graphql": "17.0.2"
   },
   "devDependencies": {
     "bats": "1.13.0"
